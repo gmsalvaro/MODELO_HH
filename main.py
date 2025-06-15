@@ -6,10 +6,10 @@ import os  # Biblioteca para manipulação de arquivos e diretórios
 import sys  # Biblioteca para interação com argumentos de linha de comando
 import json  # Biblioteca para manipulação de arquivos JSON
 
-#Grupo:
-# Álvaro José Souza Gomes - 202465095A
-# Arthur Augusto de Araujo Brito - 202465006A
-
+# Verifica se o número de argumentos é correto
+if len(sys.argv) != 2:
+    print("Uso: python main.py <arquivo_json>")
+    sys.exit(1)  # Encerra o programa com erro se o argumento não for fornecido
 # Leitura do arquivo JSON contendo os parâmetros do modelo
 json_file = sys.argv[1]  # Nome do arquivo JSON passado como argumento
 with open(json_file, "r") as f:
